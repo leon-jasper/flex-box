@@ -27,11 +27,35 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box9 { background:#2ecc71;}
 .box10 { background:#16a085;}
 
+.main-container {
+  display: flex;
+  flex-direction: column;  /* --> changes the main axis */
+  height: 100vh;
+  border: 2.5px solid red;
+}
 
-.container {
+.container1 {
+  border: 2.5px solid orange;
   display:flex;
-  border: 5px solid red;
   justify-content: center;
-  /* flex-direction: column; --> changes the main axis */
-  min-height: 100vh;
+  flex-direction: column;
+  height: 25vh;
+}
+
+.container1 .box {
+  font-size: 20px;
+}
+
+.container2 {
+  border: 2.5px solid green;
+  display:flex;
+  justify-content: center;
+  height: 25vh;
+}
+
+.container3 {
+  border: 2.5px solid black;
+  display:flex;
+  height: 25vh;
+  align-items: center /*without stretching the flex-items */
 }
