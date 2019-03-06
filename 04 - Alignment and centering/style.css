@@ -27,35 +27,84 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box9 { background:#2ecc71;}
 .box10 { background:#16a085;}
 
-.main-container {
+.container {
   display: flex;
-  flex-direction: column;  /* --> changes the main axis */
   height: 100vh;
-  border: 2.5px solid red;
+  width: 100vw;
+  border: 5px solid gold;
 }
 
-.container1 {
-  border: 2.5px solid orange;
+.container--col1 {
+  display:flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container--col2 {
+  display:flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container--col1__row1 {
+  border: 2.5px solid red;
   display:flex;
   justify-content: center;
   flex-direction: column;
-  height: 25vh;
+  height: 33.33vh;
 }
 
-.container1 .box {
+.container--col1__row1 .box {
   font-size: 20px;
 }
 
-.container2 {
-  border: 2.5px solid green;
+.container--col1__row2 {
+  height: 33.33vh;
+  border: 2.5px solid red;
   display:flex;
   justify-content: center;
-  height: 25vh;
 }
 
-.container3 {
-  border: 2.5px solid black;
+.container--col1__row3 {
+  border: 2.5px solid red;
   display:flex;
-  height: 25vh;
+  height: 33.33vh; /*align-items needs a height to work! */
   align-items: center /*without stretching the flex-items */
+}
+
+.container--col2__row1 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center; /*cross-axis! default: stretch, needs a wrap */
+  justify-content: center; /*main-axis*/
+}
+
+.container--col2__row1 .box{
+  width: 33.33333%;
+}
+
+.container--col2__row2 {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end
+}
+
+.container--col2__row2 .box1{
+  padding-bottom: 200px;
+}
+.container--col2__row2 .box2{
+  padding-bottom: 250px;
+  align-self: flex-end;
+}
+.container--col2__row2 .box3{
+  padding-bottom: 100px;
+}
+.container--col2__row2 .box4{
+  align-self: center;
+  padding-bottom: 200px;
+}
+.container--col2__row2 .box5{
+  padding-bottom: 200px;
 }
